@@ -39,7 +39,11 @@ router.get("/", function (req, res) {
     } else {
       success = true;
       sendDelayedResponse(() =>
-        res.send({ success: true, message: "Sending Data...", data: userData })
+        res.send({
+          success: true,
+          message: "Sending Data...",
+          data: userData.data,
+        })
       );
     }
   }

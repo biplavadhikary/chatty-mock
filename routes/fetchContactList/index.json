@@ -1,0 +1,19 @@
+[
+    {
+        "userId": "1234567890",
+        "contacts": [
+            {
+                "firstName": "Aditya",
+                "lastName": "Shankar"
+            },
+            {
+                "firstName": "Benu Gopal",
+                "lastName": "Iyer"
+            },
+            {
+                "firstName": "Himanta",
+                "lastName": "Mama"
+            }
+        ]
+    }
+]

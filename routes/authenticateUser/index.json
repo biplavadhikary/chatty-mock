@@ -4,7 +4,8 @@
         "password": "12345",
         "data": {
             "userName": "alex.bokeh",
-            "full Name": "Alex Bokeh",
+            "fullName": "Alex Bokeh",
+            "userId": "1234567890",
             "lastLoggedIn": "Thu Oct 28 2021 23:38:43 GMT+0530 (India Standard Time)",
             "token": "03u39483ry387388ryf8320994&@*^#@*20"
         }
@@ -14,7 +15,8 @@
         "password": "12345",
         "data": {
             "userName": "adhikary",
-            "full Name": "Adhikary & Sons",
+            "userId": "1234567890",
+            "fullName": "Adhikary & Sons",
             "lastLoggedIn": "Tue Oct 20 2021 23:38:43 GMT+0530 (India Standard Time)",
             "token": "dvrv449483ry387388ryf8320994&@*^#@*20"
         }
@@ -24,7 +26,8 @@
         "password": "12345",
         "data": {
             "userName": "catty",
-            "full Name": "Catty Cat",
+            "userId": "1234567890",
+            "fullName": "Catty Cat",
             "lastLoggedIn": "Fri Jan 10 2021 12:10:56 GMT+0530 (India Standard Time)",
             "token": "94848bjey387388ryf8320994&@*^#@*20"
         }

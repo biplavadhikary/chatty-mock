@@ -1,0 +1,59 @@
+[
+    {
+        "userId": "1234567890",
+        "conversations": {
+            "conversationItems": {
+                "8473373743": {
+                    "userId": "8473373743",
+                    "firstName": "Ram",
+                    "lastName": "Akhtar",
+                    "messageDataList": [
+                        {
+                            "messageId": "3948833",
+                            "isSender": true,
+                            "message": "hello",
+                            "dateTime": "12 Dec, 2021"
+                        },
+                        {
+                            "messageId": "9487473",
+                            "isSender": false,
+                            "message": "hello",
+                            "dateTime": "12 Dec, 2021"
+                        },
+                        {
+                            "messageId": "394883",
+                            "isSender": true,
+                            "message": "how ya doin?",
+                            "dateTime": "12 Dec, 2021"
+                        }
+                    ]
+                },
+                "94888344": {
+                    "userId": "548483837",
+                    "firstName": "Sherrif",
+                    "lastName": "Dawson",
+                    "messageDataList": [
+                        {
+                            "messageId": "3948833",
+                            "isSender": true,
+                            "message": "Heyyyyyyy",
+                            "dateTime": "12 Dec, 2021"
+                        },
+                        {
+                            "messageId": "9487473",
+                            "isSender": false,
+                            "message": "hello",
+                            "dateTime": "12 Dec, 2021"
+                        },
+                        {
+                            "messageId": "394883",
+                            "isSender": true,
+                            "message": "I' Fine",
+                            "dateTime": "12 Dec, 2021"
+                        }
+                    ]
+                }
+            } 
+        }
+    }
+]

@@ -1,14 +1,16 @@
-var createError = require("http-errors");
-var express = require("express");
-var cors = require("cors");
-var path = require("path");
-var cookieParser = require("cookie-parser");
-var logger = require("morgan");
+const createError = require("http-errors");
+const express = require("express");
+const cors = require("cors");
+const path = require("path");
+const cookieParser = require("cookie-parser");
+const logger = require("morgan");
 
-var indexRouter = require("./routes/indexRoute");
-var authenticateUserRouter = require("./routes/authenticateUser");
+const indexRouter = require("./routes/indexRoute");
+const authenticateUserRouter = require("./routes/authenticateUser");
+const fetchContactList = require("./routes/fetchContactList");
+const fetchConversations = require("./routes/fetchConversations");
 
-var app = express();
+const app = express();
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
@@ -27,6 +29,8 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
 app.use("/authenticateUser", authenticateUserRouter);
+app.use("/fetchContactList", fetchContactList);
+app.use("/fetchConversations", fetchConversations);
 
 /**
  * END: Main Routes
