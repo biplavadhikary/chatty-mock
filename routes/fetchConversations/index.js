@@ -9,7 +9,7 @@ router.get("/", function (req, res) {
   const messageData = data.find(
     (messageData) => messageData.userId === userId
   )?.conversations;
-  console.log("userid:", messageData);
+  // console.log("userid:", messageData);
 
   const sendDelayedResponse = (callback) => {
     setTimeout(callback, 2000);

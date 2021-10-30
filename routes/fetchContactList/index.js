@@ -7,7 +7,7 @@ router.get("/", function (req, res) {
   const { query: { userId } = {} } = req;
 
   const contactData = data.find((contactData) => contactData.userId === userId);
-  console.log("userid:", contactData);
+  // console.log("userid:", contactData);
 
   const sendDelayedResponse = (callback) => {
     setTimeout(callback, 2000);
