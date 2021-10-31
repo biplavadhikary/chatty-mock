@@ -7,6 +7,7 @@
 var app = require("../app");
 var debug = require("debug")("chatty-mock:server");
 var http = require("http");
+var socketInitializer = require("../socketIo");
 
 /**
  * Get port from environment and store in Express.
@@ -59,29 +60,8 @@ const io = require("socket.io")(server, {
     methods: ["GET", "POST"],
   },
 });
-// io.set("origins", "*:*");
 
-io.on("connection", (socket) => {
-  const { userId: id } = socket.handshake.query;
-  socket.join(id);
-  console.log(`USER ID - ${id} is Connected`);
-
-  socket.on("send-message", ({ recipients, messageItem }) => {
-    // console.log("SENT - RECIPIENTS", recipients);
-    // console.log("SENT - MESSAGEITEM", messageItem);
-    recipients.forEach((recipient) => {
-      const otherReceipients = recipients.filter((r) => r !== recipient);
-      socket.broadcast.to(recipient).emit("receive-message", {
-        recipients: otherReceipients,
-        sender: id,
-        messageItem: {
-          ...messageItem,
-          isSender: false,
-        },
-      });
-    });
-  });
-});
+io.on("connection", socketInitializer);
 
 /**
  * Event listener for HTTP server "error" event.
