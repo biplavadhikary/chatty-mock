@@ -29,8 +29,10 @@ const initializeSocketConnection = (socket) => {
       // stop sending interval notifications
       clearInterval(handler);
     } else {
-      // stop watching the specified file
-      handler.close();
+      if (handler) {
+        // stop watching the specified file
+        handler.close();
+      }
     }
   });
 };

@@ -34,14 +34,21 @@ function sendStatusUpdate(socket) {
    * For Mode: monitor
    */
 
-  const monitorFileForChanges = () =>
-    fs.watch(constants.FILE_PATH_TO_MONITOR, (event) => {
-      if (event.toLowerCase() == "change") {
-        readLastLines.read(constants.FILE_PATH_TO_MONITOR, 1).then((lines) => {
-          emitMessage(lines);
-        });
-      }
-    });
+  const monitorFileForChanges = () => {
+    try {
+      return fs.watch(constants.FILE_PATH_TO_MONITOR, (event) => {
+        if (event.toLowerCase() == "change") {
+          readLastLines
+            .read(constants.FILE_PATH_TO_MONITOR, 1)
+            .then((lines) => {
+              emitMessage(lines);
+            });
+        }
+      });
+    } catch (error) {
+      console.log("Error in finding the specified File");
+    }
+  };
 
   return constants.MODE.toLowerCase() === "interval"
     ? sendConstantUpdatesInterval()
