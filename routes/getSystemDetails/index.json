@@ -1,0 +1,22 @@
+[
+    {
+        "ip": "192.168.1.1",
+        "endpoint": "abc",
+        "data": {
+            "version": 3.1,
+            "serial": "23wdw3.455.22asd54vv",
+            "name": "dragon ball",
+            "status": "running"
+        }
+    },
+    {
+        "ip": "127.0.0.1",
+        "endpoint": "xyz",
+        "database": "sql",
+        "data": {
+            "version": 1.4,
+            "serial": "23wdw3.455.22asd54vv",
+            "name": "dragon ball"
+        }
+    }
+]

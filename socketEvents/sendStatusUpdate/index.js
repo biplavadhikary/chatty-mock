@@ -11,6 +11,7 @@ function sendStatusUpdate(socket) {
     console.log(`Sending - ${message}`);
 
     socket.emit(eventNames.SEND_STATUS_UPDATE, {
+      id: `${new Date().getTime()}`,
       message,
     });
   };

@@ -9,6 +9,7 @@ const indexRouter = require("./routes/indexRoute");
 const authenticateUserRouter = require("./routes/authenticateUser");
 const fetchContactList = require("./routes/fetchContactList");
 const fetchConversations = require("./routes/fetchConversations");
+const getSystemDetails = require("./routes/getSystemDetails");
 
 const app = express();
 
@@ -31,6 +32,7 @@ app.use("/", indexRouter);
 app.use("/authenticateUser", authenticateUserRouter);
 app.use("/fetchContactList", fetchContactList);
 app.use("/fetchConversations", fetchConversations);
+app.use("/getSystemDetails", getSystemDetails);
 
 /**
  * END: Main Routes
